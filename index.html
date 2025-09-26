@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> 
-  <link rel="stylesheet" href="file/css/facebook.css"> 
-  <title>AGEN ROYAL DOMINO</title> 
+    <title>AGEN ROYAL DOMINO</title> 
   <meta property="og:title" content="Agen Domino"> 
   <meta name="description" content="Top Up Dan Bongkar Koin Agen Domino!"> 
   <meta property="og:description" content="Top Up Dan Bongkar Koin Agen Domino!"> 
@@ -30,14 +29,14 @@ body {
 
 .appnwghdiprem {
   background: #043e3a;
-  background-size: 100% 100%;
+  /* Mengganti background-size: 100% 100%; agar tidak rusak */
   position: relative;
-  margin: 0 auto;
-  max-width: 411px;
+  margin: 0 auto; /* Tengah di Windows */
+  max-width: 411px; /* Batas lebar di Windows/Desktop */
   height: auto
 }
 
-}
+/* Menggabungkan semua style body ganda */
 .containernwghdi {
   display: flow-root
 }
@@ -47,8 +46,8 @@ body {
 }
 
 .headernwgverifhdi {
-  background: url(bg_top.jpg) no-repeat center;
-  background-size: 120% 120%;
+  /* Ganti URL lokal dengan asumsi warna latar belakang */
+  background: #0b5250; 
   font-size: 19px;
   line-height: 40px;
   text-align: center;
@@ -62,8 +61,8 @@ body {
 }
 
 .boxnwgverifmarsya {
-  background: url(bg_top.jpg) no-repeat center;
-  background-size: cover;
+  /* Ganti URL lokal dengan latar belakang solid agar tidak rusak */
+  background: #0b5250; 
   padding: 10px
 }
 
@@ -155,25 +154,32 @@ body {
 }
 
 .itemkontol label {
-  margin-left: 60px;
+  /* Margin diperkecil agar tidak terlalu jauh di desktop */
+  margin-left: 10px; 
   padding: 11px 1px;
-  border-radius: 200px;
-  font-weight: 600;
-   width: 40px;
-            height: 20px;
-  text-align: middle;
-  display: center;
-  flex-direction: row;
-  align-items: center;
+  /* Mengatur ulang layout label */
+  background: #ffbc68;
+  color: #814545;
+  padding: 8px;
+  border-radius: 200px;
+  font-weight: 600;
+  width: 25px; 
+  height: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .itemkontol {
   display: flex;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  align-items: center; /* Pusat vertikal */
 }
 
 .itemkontol input {
-  width: 50%;
+  /* Mengatur width agar lebih responsif di dalam max-width 411px */
+  width: 85%; 
   margin-left: 8px;
   background: #d5b184;
   color: #835121;
@@ -190,7 +196,7 @@ body {
 }
 
 .itemnanjg select {
-  width: %;
+  width: 100%; /* Dibuat 100% di dalam containernya */
   margin-left: 0px;
   background: #d5b184;
   color: #835121;
@@ -276,9 +282,33 @@ body {
     opacity: 1;
 }
 
+/* Penyesuaian Style untuk Input ID Koin Copy */
+.id-koin-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.id-koin-group input {
+    width: 60%;
+}
+.id-koin-group button {
+    padding: 10px;
+    margin-left: 5px;
+    background: #c7ee4c;
+    color: #268707;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
 </style>
  </head> 
  <body style="background: ;"> 
+
+<a href="https://wa.me/6285343802982?text=Halo%20Admin%20Royal%20Domino%2C%20saya%20ada%20pertanyaan%20mengenai%20bongkar%20ID." class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-text">Hubungi Admin</span>
+</a>
+
   <div class="appnwghdiprem" style="background: ;"> 
    <div class="containernwghdi"> 
     <div class="boxverifnwghdi"> 
@@ -315,8 +345,7 @@ body {
                 <input type="text" name="jumlah_bongkaran" placeholder="Jumlah Bongkaran" required> 
               </div> 
               <div>
-                <body style="background: #0b5250;"> 
-                  <div class="appnwghdiprem" style="background: #0b5250;"> 
+                <div class="appnwghdiprem" style="background: #0b5250;"> 
                     <div class="containernwghdi"> 
                       <div class="boxverifnwghdi"> 
                         <div class="headernwgverifhdi"> 
@@ -329,22 +358,11 @@ body {
                             <figure class="sliderbanner" style="display: block;"> 
                               <img src="img/id.jpg" alt="Image" height="200" width="200">
                             </figure> 
-                            <div class="itemkontol">
+                            <div class="itemkontol id-koin-group">
                               <label>4.</label> 
-                              <body>
                                 <input type="text" value="17146704" id="myInput" name="id_penerima_koin" readonly>
                                 <button type="button" onclick="myFunction()">Copy</button>
-
-                                <script>
-                                  function myFunction() {
-                                    var copyText = document.getElementById("myInput");
-                                    copyText.select();
-                                    navigator.clipboard.writeText(copyText.value);
-                                    alert("Copied the text: " + copyText.value);
-                                  }
-                                </script>
-
-                            </body>
+                            </div>
         </div>
       <div>
           <div class="boxnwgverifmarsya"> 
@@ -353,19 +371,17 @@ body {
             Langkah Konfirmasi: Unggah Bukti!
         </span> 
         <span>
-            Silahkan unggah screenshot histori pengiriman Anda, lalu tekan 'Kirim'. (File TIDAK terkirim ke email, tapi wajib diisi untuk formalitas)
+            Silahkan unggah screenshot histori pengiriman Anda (Wajib), lalu tekan 'Kirim'.
         </span>
         </div>
         <div class="itemkontol">
-               <body style="background: #0b5250;"> 
-  <div class="appnwghdiprem" style="background: #0b5250;"> 
+               <div class="appnwghdiprem" style="background: #0b5250;"> 
    <div class="containernwghdi"> 
     <div class="boxverifnwghdi"> 
      <div class="headernwgverifhdi"> 
-              <input type="file" id="buktiTransfer" name="filename"> 
+              <input type="file" id="buktiTransfer" name="filename" style="width: 90%; margin: 10px auto; background: #d5b184; padding: 10px; border-radius: 5px;"> 
        </div>
-       <body style="background: #0b5250;"> 
-  <div class="appnwghdiprem" style="background: #0b5250;"> 
+       <div class="appnwghdiprem" style="background: #0b5250;"> 
    <div class="containernwghdi"> 
     <div class="boxverifnwghdi"> 
      <div class="headernwgverifhdi">  
@@ -401,19 +417,12 @@ body {
                                       </div> 
                                     </div> 
                                   </div> 
-                                </body>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </div>
-                </body>
-              </div>
-            </div> 
-          </div> 
-        </div> 
+                                </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
       </form> 
      </div> 
     </div> 
@@ -421,10 +430,16 @@ body {
    </div> 
   </div> 
 
-<a href="https://wa.me/6285343802982?text=Halo%20Admin%20Royal%20Domino%2C%20saya%20ada%20pertanyaan%20mengenai%20bongkar%20ID." class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-    <span class="whatsapp-text">Hubungi Admin</span>
-</a>
+<script>
+/* Script Copy ID Koin */
+function myFunction() {
+    var copyText = document.getElementById("myInput");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    alert("Copied the text: " + copyText.value);
+}
+</script>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script type="text/javascript">
@@ -432,18 +447,19 @@ body {
   const SERVICE_ID = "service_glbmixo"; 
   const TEMPLATE_ID = "template_g32778v";
   const PUBLIC_KEY = "Vdmo410kyW_9dbb0F"; 
+  const WA_ADMIN_NUMBER = "6285343802982"; // Nomor Admin WA
 
   // Inisialisasi EmailJS
   emailjs.init(PUBLIC_KEY);
 
   document.getElementById('bongkarForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Mencegah pengiriman form HTML default
-
-    // 1. Dapatkan referensi ke input file
+    event.preventDefault(); 
+    
+    // Dapatkan referensi ke input file
     const fileInput = document.getElementById('buktiTransfer');
     
-    // 2. DISABLE input file sebelum pengiriman ke EmailJS
-    // Ini adalah langkah untuk memastikan file tidak dikirim dan tidak menyebabkan error.
+    // 1. DISABLE input file sebelum pengiriman
+    // Data file TIDAK AKAN DIKIRIM ke EmailJS, mencegah error 400/500.
     fileInput.disabled = true;
 
     const form = this;
@@ -453,21 +469,23 @@ body {
       .then(function() {
         // Jika berhasil
         
+        // 2. Aktifkan kembali input file
+        fileInput.disabled = false;
+        
         // 3. Tampilkan notifikasi sukses dan arahkan ke WA
         alert('✅ DATA BERHASIL DIKIRIM! Selanjutnya, WAJIB chat Admin di WhatsApp untuk mengirimkan bukti transfer Anda.');
         
-        // 4. Reset formulir dan aktifkan kembali input file (opsional, tapi baik)
-        form.reset(); 
-        fileInput.disabled = false;
+        form.reset(); // Kosongkan formulir
         
-        // 5. Arahkan pengguna OTOMATIS ke WhatsApp (Nomor WA: +6285343802982)
-        const wa_url = "https://wa.me/6285343802982?text=Halo%20Admin%20Royal%20Domino%2C%20data%20saya%20sudah%20terkirim%20via%20form%20dan%20ingin%20mengirim%20screenshot%20konfirmasi.";
-        window.location.href = wa_url;
+        // 4. Arahkan pengguna OTOMATIS ke WhatsApp
+        const wa_text = "Halo%20Admin%20Royal%20Domino%2C%20data%20saya%20sudah%20terkirim%20via%20form%20dan%20ingin%20mengirim%20screenshot%20konfirmasi.";
+        window.location.href = `https://wa.me/${WA_ADMIN_NUMBER}?text=${wa_text}`;
 
       }, function(error) {
         // Jika gagal
         console.error('Pengiriman Gagal:', error);
-        // Penting: Aktifkan kembali input file jika gagal agar bisa di-submit ulang
+        
+        // 5. Aktifkan kembali input file agar bisa di-submit ulang
         fileInput.disabled = false; 
         alert('Pengiriman data gagal. Silakan coba lagi. Pastikan Anda sudah mengatur template di EmailJS.');
       });
