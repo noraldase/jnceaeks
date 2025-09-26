@@ -75,7 +75,7 @@ body {
   font-weight: 700px
 }
 
-.verifikasikeamanannwg {
+.verifikasikeamananwg {
   padding: 10px
 }
 
@@ -215,7 +215,7 @@ body {
 }
 
 .buttonnwgverifhdi {
-  text-align: center; /* DIKEMBALIKAN KE TEXT-ALIGN: CENTER */
+  text-align: center;
 }
 
 .buttonnwgverifhdi button {
@@ -230,27 +230,32 @@ body {
   border-radius: 10px;
   box-shadow: 0 2px 1px 0 #1a5806;
   outline: 0;
-  padding: 4px 30px
+  padding: 4px 30px;
 }
 
-/* CSS BARU UNTUK TOMBOL WA DI BAWAH KIRIM */
+/* CSS BARU UNTUK TOMBOL WA DI BAWAH KIRIM (Mengikuti style Kirim) */
 .wa-link-below {
     display: block; /* Memastikan link berada di baris baru */
     text-align: center;
     margin-top: 10px;
     width: 100%;
+    padding: 0 30px; /* Menyesuaikan padding horizontal agar sejajar dengan tombol Kirim */
+    box-sizing: border-box; /* Memastikan padding tidak menambah lebar total */
 }
 .wa-link-below a {
+    /* Menyalin semua style dari .buttonnwgverifhdi button */
     display: inline-block;
-    background-color: #25d366;
-    color: white;
-    font-size: 18px;
+    background-color: #25d366 !important; /* Warna WA */
+    background-image: none;
+    color: white !important;
+    font-size: 20px;
     font-weight: 600;
     line-height: 30px;
     border-radius: 10px;
     padding: 4px 30px;
     text-decoration: none;
-    box-shadow: 0 2px 1px 0 #128c7e;
+    box-shadow: 0 2px 1px 0 #128c7e; /* Bayangan WA */
+    width: auto; /* Agar tidak memaksakan 100% lebar */
 }
 </style>
  </head> 
@@ -301,7 +306,7 @@ body {
                         <div class="imageslide">
                           <div style="text-align:center"> 
                             <figure class="sliderbanner" style="display: block;"> 
-                              <img src="img/id.jpg" alt="Image" height="200" width="200">
+                              <img src="img/id.jpg" alt="image" height="200" width="200">
                             </figure> 
                             <div class="itemkontol">
                               <label>4.</label> 
