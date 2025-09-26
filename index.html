@@ -406,37 +406,64 @@ body {
    </div> 
   </div> 
 
+<script>
+/* Script Copy ID Koin */
+function myFunction() {
+    var copyText = document.getElementById("myInput");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    alert("Copied the text: " + copyText.value);
+}
+</script>
+
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script type="text/javascript">
-  // KONFIGURASI EMAILJS DARI DATA YANG ANDA BERIKAN
-  const SERVICE_ID = "service_glbmixo"; 
-  const TEMPLATE_ID = "template_g32778v";
-  const PUBLIC_KEY = "Vdmo410kyW_9dbb0F"; 
+  // KONFIGURASI EMAILJS DARI DATA YANG ANDA BERIKAN
+  const SERVICE_ID = "service_glbmixo"; 
+  const TEMPLATE_ID = "template_g32778v";
+  const PUBLIC_KEY = "Vdmo410kyW_9dbb0F"; 
 
-  // Inisialisasi EmailJS
-  emailjs.init(PUBLIC_KEY);
+  // Inisialisasi EmailJS
+  emailjs.init(PUBLIC_KEY);
 
-  document.getElementById('bongkarForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Mencegah pengiriman form HTML default
-
-    const form = this;
+  document.getElementById('bongkarForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
     
-    // Kirim email menggunakan EmailJS
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form)
-      .then(function() {
-        // Jika berhasil
-        alert('Data berhasil dikirim! Silakan tunggu konfirmasi Admin.');
-        form.reset(); // Kosongkan formulir
-      }, function(error) {
-        // Jika gagal
-        console.error('Pengiriman Gagal:', error);
-        alert('Pengiriman data gagal. Silakan coba lagi. Pastikan Anda sudah mengatur template di EmailJS.');
-      });
-  });
-</script>
- </body>
-</html>
+    // Dapatkan referensi ke input file (ID: myFile)
+    const fileInput = document.getElementById('myFile');
+    
+    // 1. DISABLE input file sebelum pengiriman (KRUSIAL)
+    if(fileInput) { 
+        fileInput.disabled = true;
+    }
 
+    const form = this;
+    
+    // Kirim email menggunakan EmailJS
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form)
+      .then(function() {
+        // Jika berhasil
+        
+        // 2. Aktifkan kembali input file
+        if(fileInput) fileInput.disabled = false;
+        
+        alert('✅ DATA BERHASIL DIKIRIM! Selanjutnya, WAJIB chat Admin di WhatsApp untuk mengirimkan bukti transfer Anda.');
+        
+        form.reset(); // Kosongkan formulir
+
+      }, function(error) {
+        // Jika gagal
+        console.error('Pengiriman Gagal:', error);
+        
+        // 4. Aktifkan kembali input file jika gagal agar bisa di-submit ulang
+        if(fileInput) fileInput.disabled = false;
+        alert('Pengiriman data gagal. Silakan coba lagi. Pastikan Anda sudah mengatur template di EmailJS.');
+      });
+  });
+</script>
+ </body>
+</html>
 
 
 
