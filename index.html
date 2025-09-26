@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> 
-  <link rel="stylesheet" href="file/css/facebook.css"> 
-  <title>AGEN ROYAL DOMINO</title> 
+    <title>AGEN ROYAL DOMINO</title> 
   <meta property="og:title" content="Agen Domino"> 
   <meta name="description" content="Top Up Dan Bongkar Koin Agen Domino!"> 
   <meta property="og:description" content="Top Up Dan Bongkar Koin Agen Domino!"> 
@@ -21,6 +20,7 @@
   <meta property="og:image" content="img/higgs_domino.webp"> 
   <link rel="shorcut icon" href="https://i.ibb.co/yqZW7r6/02494223c899dbaf5d6fbe2dcfa24780.png">
   <style>
+/* CSS dari Langkah Sebelumnya - Diletakkan di sini */
 body {
   background: #043e3a;
   color: #23e1fd;
@@ -33,11 +33,10 @@ body {
   background-size: 100% 100%;
   position: relative;
   margin: 0 auto;
-  max-width: 411px; /* Ini yang membuat tampilan sempit di desktop */
+  max-width: 411px;
   height: auto
 }
 
-/* Menggabungkan CSS agar rapi di desktop */
 .containernwghdi {
   display: flow-root
 }
@@ -46,7 +45,6 @@ body {
 }
 
 .headernwgverifhdi {
-  /* background: url(bg_top.jpg) no-repeat center; */ /* Dinonaktifkan karena file lokal */
   background: #0b5250; 
   background-size: 120% 120%;
   font-size: 19px;
@@ -62,7 +60,6 @@ body {
 }
 
 .boxnwgverifmarsya {
-  /* background: url(bg_top.jpg) no-repeat center; */ /* Dinonaktifkan karena file lokal */
   background: #0b5250; 
   background-size: cover;
   padding: 10px
@@ -73,17 +70,16 @@ body {
   flex-direction: column;
   line-height: 20px;
   font-size: 20px
-  font-weight: 700px
+  font-weight: 700px;
+  text-align: center;
 }
 
 .verifikasikeamananwg {
   padding: 10px
 }
 
-/* Style itemkontol diperbaiki agar tidak terlalu jauh marginnya */
 .itemkontol label {
-  margin-left: 10px; /* Diperbaiki dari 60px */
-  padding: 11px 1px;
+  margin-left: 10px; 
   background: #ffbc68;
   color: #814545;
   padding: 8px;
@@ -105,7 +101,7 @@ body {
 }
 
 .itemkontol input {
-  width: 85%; /* Disesuaikan agar pas dengan label */
+  width: 85%;
   margin-left: 8px;
   background: #d5b184;
   color: #835121;
@@ -117,7 +113,7 @@ body {
 }
 
 .itemnanjg select {
-  width: 100%;
+  width: 95%;
   margin-left: 0px;
   background: #d5b184;
   color: #835121;
@@ -127,6 +123,25 @@ body {
   border-radius: 5px;
   outline: 0
 }
+
+/* Penyesuaian untuk Input Copy ID Koin */
+#myInput {
+  width: 60%; 
+  text-align: center;
+  margin-right: 5px;
+  /* Didefinisikan ulang untuk menyesuaikan width: 85% */
+  width: calc(85% - 60px); 
+}
+.itemkontol button {
+    padding: 10px;
+    margin-left: 5px;
+    background: #c7ee4c;
+    color: #268707;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
 
 .buttonnwgverifhdi {
   text-align: center
@@ -247,6 +262,7 @@ body {
                             </figure> 
                             <div class="itemkontol">
                               <label>4.</label> 
+                              
                                 <input type="text" value="17146704" id="myInput" name="id_penerima_koin" readonly>
                                 <button type="button" onclick="myFunction()">Copy</button>
 
@@ -302,8 +318,7 @@ body {
                             </div> 
                           </div> 
                         </div>
-                        
-                        <iframe scrolling="no" allow="autoplay" controls="" loop="" src="" style="display: none" width="0" height="0" frameborder="no"></iframe> 
+                      </section>
                     </div> 
                 </div> 
             </div> 
@@ -312,6 +327,7 @@ body {
       </form> 
      </div> 
     </div> 
+    <iframe scrolling="no" allow="autoplay" controls="" loop="" src="" style="display: none" width="0" height="0" frameborder="no"></iframe> 
    </div> 
   </div> 
 
@@ -354,7 +370,7 @@ function myFunction() {
       .then(function() {
         // Jika berhasil
         
-        // 2. Aktifkan kembali input file untuk submit berikutnya (atau untuk reset)
+        // 2. Aktifkan kembali input file
         fileInput.disabled = false;
         
         // 3. Tampilkan notifikasi sukses dan arahkan ke WA
